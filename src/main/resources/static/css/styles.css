@@ -1,0 +1,118 @@
+
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+html,body{
+height: 100%;
+width: 100%;
+  min-height: 100vh;
+  background: #c850c0;
+  background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+  background: -o-linear-gradient(45deg, #4158d0, #c850c0);
+  background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
+  background: linear-gradient(45deg, #4158d0, #c850c0);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+.background {
+  position: absolute;
+  width:100%;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header {
+  position: absolute;
+  display: block;
+  background-color:white;
+  height:250px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.container{
+  height: 100%;
+  align-content: center;
+  z-index: 5;
+}
+
+.card{
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-header{
+  position: relative;
+  font-family: OpenSans-Regular;
+  color: white;
+  text-align:center;
+  top:50px;
+}
+
+
+.card-body{
+  font-family: OpenSans-Regular;
+  position: relative;
+  color: white;
+  top:50px;
+}
+
+
+input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+
+.get_btn{
+  font-family: OpenSans-Regular;
+  color: black;
+  background-color: #FFC312;
+  width: 100px;
+}
+
+.get_btn:hover{
+  color: black;
+  background-color: white;
+}
+
+.list_btn{
+  font-family: OpenSans-Regular;
+  color:black;
+  background-color: #FFC312;
+  width:100px;
+  top:50px;
+  //style: btn float-right get_btn
+}
+.list_btn:hover{
+  color: black;
+  background-color: white;
+}
+
+.result{
+  font-family: OpenSans-Regular;
+  color: white;
+  padding:2px;
+}
+
+.result a{
+  font-family: OpenSans-Regular;
+margin-left: 4px;
+}

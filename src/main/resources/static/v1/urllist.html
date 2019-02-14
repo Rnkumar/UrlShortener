@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Urls List</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../vendor/particles.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="listApp" ng-controller="listController" data-ng-init="init();">
+<canvas class="background"></canvas>
+	<script>
+		window.onload = function() {
+			Particles.init({selector: '.background',color:'#ffffff'  });
+		};
+        var app = angular.module("listApp",[]);
+        app.controller("listController",function($scope,$http){
+            $scope.init=function() {
+                $http.get("/urls/getAllUrls/").then(function(response) {
+                    $scope.count=0;
+                    data = response["data"];
+                    n=1;
+                    $scope.urls = data.map(function(x){
+                        var cDate = new Date(x["createdAt"]);
+                        x["createdAt"] = cDate.toDateString();
+                        var uDate = new Date(x["updatedAt"]);
+                        x["updatedAt"] = uDate.toDateString();
+                        x["count"] = n++;
+                        return x;
+                    });
+                }, function(response) {
+                    alert("Error");
+                });
+            };
+        });
+	</script>
+	<p style="position: absolute;left:100px; font-size: 25px; font-style:normal; font-weight: bold;top:30px;color:white;">Url's List</p>
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">S.No</th>
+								<th class="column2">Original Url</th>
+								<th class="column3">Short Url</th>
+								<th class="column4">Hits</th>
+								<th class="column5">Created Date</th>
+								<th class="column6">Updated Date</th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr ng-repeat="x in urls">
+									<td class="column1">{{ x["count"] }}</td>
+                                    <td class="column2"><a href="{{x['originalUrl']}}" target="_blank">{{x["originalUrl"]}}</a></td>
+                                    <td class="column3"><a href="{{x['shortenedUrl']}}" target="_blank">{{x["shortenedUrl"]}}</a></td>
+									<td class="column4">{{x["hits"]}}</td>
+									<td class="column5">{{x["createdAt"]}}</td>
+									<td class="column6">{{x["updatedAt"]}}</td>
+								</tr>
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../vendor/bootstrap/js/popper.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../vendor/select2/select2.min.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+</html>
