@@ -10,19 +10,25 @@
 
 ### Dependencies
 	
-	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation(group: 'org.springframework.security', name: 'spring-security-test')
     testImplementation(group: 'junit', name: 'junit')
 
-###File Locations:
+### File Locations:
 
 		src/main/java  -  Java Files
 		src/main/resource - Html Files(index.html,urllist.html)
 		(Note: angular cdn url is used - Need internet)
+		
+### Screenshots:
+	https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png "Home Page"
 	
-###Video Demo Url 
-
-	[Demo Video Link Click Here](https://youtu.be/wsbUtzCN_jQ)
+	https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/urllistpage.png "UrlList Page"
+	
+### Video Demo 
+	<a href="https://youtu.be/wsbUtzCN_jQ" target="_blank"><img src="https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png" 
+alt="Check https://youtu.be/wsbUtzCN_jQ for video demo" width="240" height="180" border="10" /></a>
+	
