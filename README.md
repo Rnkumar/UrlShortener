@@ -24,11 +24,12 @@
 		(Note: angular cdn url is used - Need internet)
 		
 ### Screenshots:
-	https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png "Home Page"
+
+	![Home Page](https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png "Home Page")
 	
-	https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/urllistpage.png "UrlList Page"
-	
+	![UrlList Page](https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/urllistpage.png "UrlList Page")
+
 ### Video Demo 
-	<a href="https://youtu.be/wsbUtzCN_jQ" target="_blank"><img src="https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png" 
-alt="Check https://youtu.be/wsbUtzCN_jQ for video demo" width="240" height="180" border="10" /></a>
+
+	[Youtube Link Click Here](https://youtu.be/wsbUtzCN_jQ)
 	
