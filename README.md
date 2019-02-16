@@ -25,11 +25,11 @@
 		
 ### Screenshots:
 
-	![Home Page](https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png "Home Page")
-	
-	![UrlList Page](https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/urllistpage.png "UrlList Page")
+![Home Page](https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/homepage.png)
+
+![UrlList Page](https://github.com/Rnkumar/UrlShortener/blob/master/screenshots/urllistpage.png)
 
 ### Video Demo 
 
-	[Youtube Link Click Here](https://youtu.be/wsbUtzCN_jQ)
+Youtube Link Click Here(https://youtu.be/wsbUtzCN_jQ)
 	
