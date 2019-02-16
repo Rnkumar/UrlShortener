@@ -2,7 +2,6 @@ package com.project.urlshortenerv1;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -14,8 +13,7 @@ import java.util.List;
 
 
 @RestController
-//@RequestMapping("/")
-public class UrlDataOperationController implements ErrorController {
+public class UrlDataOperationController{
 
     @Autowired
     UrlDataRepository urlDataRepository;
@@ -35,9 +33,6 @@ public class UrlDataOperationController implements ErrorController {
         return urlDataRepository.findAll();
     }
 
-
-
-
     @RequestMapping(value = "/error")
     public RedirectView getError(){
         RedirectView redirectView = new RedirectView("http://localhost:8443/v1/error.html");
@@ -45,7 +40,7 @@ public class UrlDataOperationController implements ErrorController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public RedirectView getUrlById(@PathVariable("id")  String uniqueName) {
+    public RedirectView getUrlByIdKey(@PathVariable("id")  String uniqueName) {
         System.out.println("Value+"+uniqueName);
         Query query = new Query();
         query.addCriteria(Criteria.where("urlKey").is(uniqueName));
@@ -85,8 +80,4 @@ public class UrlDataOperationController implements ErrorController {
         urlDataRepository.delete(urlDataRepository.findBy_id(id));
     }
 
-    @Override
-    public String getErrorPath() {
-        return "/error";
-    }
 }

@@ -79,14 +79,14 @@ public class IDGenerator {
         return digits;
     }
 
-    public Long getDictionaryKeyFromUniqueID(String uniqueID) {
-        List<Character> base62Number = new ArrayList<>();
-        for (int i = 0; i < uniqueID.length(); ++i) {
-            base62Number.add(uniqueID.charAt(i));
-        }
-        Long dictionaryKey = convertBase62ToBase10ID(base62Number);
-        return dictionaryKey;
-    }
+//    public Long getDictionaryKeyFromUniqueID(String uniqueID) {
+//        List<Character> base62Number = new ArrayList<>();
+//        for (int i = 0; i < uniqueID.length(); ++i) {
+//            base62Number.add(uniqueID.charAt(i));
+//        }
+//        Long dictionaryKey = convertBase62ToBase10ID(base62Number);
+//        return dictionaryKey;
+//    }
 
     private Long convertBase62ToBase10ID(List<Character> ids) {
         long id = 0L;
